@@ -40,7 +40,7 @@ Successfully created a single, optimized PCTG filament profile for the Prusa Cor
 ### 🔧 **Bambu Labs Proven Settings**
 
 - Temperature: 268°C nozzle, 260°C first layer, 80°C bed
-- Pressure advance: 0.02 via start G-code
+- Pressure advance: 0.03 via start G-code (increased for better precision)
 - Retraction: 0.8mm @ 35mm/s with 25mm/s deretract
 
 ## Ready for Production

@@ -35,7 +35,7 @@ The optimized PCTG profile has been successfully created with comprehensive docu
 ### 🔧 Bambu Labs Core Settings (Maintained)
 
 - **Temperature:** 268°C nozzle, 260°C first layer, 80°C bed
-- **Pressure Advance:** 0.02 (set via start G-code)
+- **Pressure Advance:** 0.03 (set via start G-code, increased for better precision)
 - **Retraction:** 0.8mm length, 35mm/s speed, 25mm/s deretract
 
 ## Testing Instructions

@@ -36,8 +36,8 @@ The definitive PCTG profile with comprehensive documentation and optimizations b
 
 ### Pressure Advance
 
-- **Value:** 0.02
-- **Implementation:** Set via start G-code `M572 S0.02`
+- **Value:** 0.03 (increased for better precision)
+- **Implementation:** Set via start G-code `M572 S0.03`
 
 ### Retraction Settings
 
