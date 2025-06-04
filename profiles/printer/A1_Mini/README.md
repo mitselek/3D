@@ -4,7 +4,7 @@ This directory contains configuration files specific to the Bambu Lab A1 Mini 3D
 
 ## Directory Structure
 
-```
+```text
 A1_Mini/
 ├── gcode/
 │   ├── start/          # Start G-code files
@@ -15,10 +15,12 @@ A1_Mini/
 ## G-code Files
 
 ### Start G-code
+
 - `A1_mini_start.gcode` - Current optimized start sequence
 - `A1_mini_original_start.gcode` - Original factory start sequence (backup)
 
-### End G-code  
+### End G-code
+
 - `A1_mini_end.gcode` - Current optimized end sequence
 - `A1_mini_original_end.gcode` - Original factory end sequence (backup)
 
