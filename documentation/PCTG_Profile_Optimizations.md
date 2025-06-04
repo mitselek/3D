@@ -2,7 +2,7 @@
 
 ## Final Profile
 
-### Extrudr PCTG Core One v2.0 Organized (`Extrudr_PCTG_Core_One_v2_organized.ini`)
+### Extrudr PCTG Core One v2.0 Organized (`profiles/filament/PCTG/Extrudr_PCTG_Core_One_v2_organized.ini`)
 
 The definitive PCTG profile with comprehensive documentation and optimizations based on Bambu Labs proven settings.
 

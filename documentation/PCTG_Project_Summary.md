@@ -8,7 +8,7 @@ Successfully created a single, optimized PCTG filament profile for the Prusa Cor
 
 ### Core Profile
 
-- **`Extrudr_PCTG_Core_One_v2_organized.ini`** - The definitive PCTG profile
+- **`profiles/filament/PCTG/Extrudr_PCTG_Core_One_v2_organized.ini`** - The definitive PCTG profile
   - Comprehensive documentation with section headers
   - PrusaSlicer-compatible (no inline comments)
   - Production-ready with educational value

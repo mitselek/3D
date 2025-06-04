@@ -8,7 +8,7 @@ The optimized PCTG profile has been successfully created with comprehensive docu
 
 ### Organized Educational Profile (PrusaSlicer Ready)
 
-**File:** `Extrudr_PCTG_Core_One_v2_organized.ini`
+**File:** `profiles/filament/PCTG/Extrudr_PCTG_Core_One_v2_organized.ini`
 
 - **Format:** Well-commented with section headers and detailed explanations
 - **Status:** ✅ Fixed - inline comments removed, now PrusaSlicer compatible
@@ -45,7 +45,7 @@ The optimized PCTG profile has been successfully created with comprehensive docu
 1. Open PrusaSlicer
 2. Go to **Configuration → Manage Profiles**
 3. Select **Filament** tab
-4. Click **Import** and select `Extrudr_PCTG_Core_One_v2_organized.ini`
+4. Click **Import** and select `profiles/filament/PCTG/Extrudr_PCTG_Core_One_v2_organized.ini`
 5. The profile will be available for use with detailed documentation
 
 ### Test Print Recommendations
