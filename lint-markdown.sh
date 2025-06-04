@@ -2,6 +2,33 @@
 
 # Markdown Linting Script for 3D Printing Workspace
 # Checks all .md files for common markdown formatting issues
+#
+# DEVELOPMENT PLAN (June 4, 2025):
+# - Improve this linting script gradually as new errors get encountered
+# - When VS Code PROBLEMS tab shows markdown issues:
+#   1. Run this script first - if it reports errors, fix them
+#   2. If this script shows no errors but VS Code does, enhance this script
+#   3. If terminal output fails, report "eyesight struggle" and ask for help
+# - Add new checks immediately when encountered
+# - Collect false positives and deal with them as they appear
+# - Track weird edge cases in comments below
+#
+# CURRENT MARKDOWN RULES CHECKED:
+# - MD040: Fenced code blocks without language specification (```$)
+# - MD012: Multiple consecutive blank lines (3+ blank lines in a row)
+# - MD022: Headings should be surrounded by blank lines
+#
+# KNOWN EDGE CASES:
+# - Malformed code block: ```text closing fence instead of ``` (not yet handled)
+#
+# FALSE POSITIVES ENCOUNTERED:
+# - (none yet)
+#
+# NOT YET IMPLEMENTED (common VS Code markdown rules):
+# - MD032: Lists should be surrounded by blank lines  
+# - MD031: Fenced code blocks should be surrounded by blank lines
+# - MD025: Multiple top-level headings
+# - MD041: First line should be a top-level heading
 
 WORKSPACE_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 TOTAL_FILES=0
@@ -68,6 +95,33 @@ check_file() {
         echo "  ⚠️  Multiple consecutive blank lines:"
         echo "$blank_lines" | sed 's/^/    /'
         issues=$((issues + $(echo "$blank_lines" | wc -l)))
+    fi
+    
+    # Check for MD022: Headings should be surrounded by blank lines
+    local heading_issues
+    heading_issues=$(awk 'BEGIN {line_num=0} {
+        line_num++
+        if ($0 ~ /^#+/) {
+            # Check if heading has blank line before (except first line)
+            if (line_num > 1 && prev_line != "") {
+                print "Line " line_num ": MD022 - Heading should have blank line before"
+            }
+            # Check if heading has blank line after (except last line)
+            getline next_line
+            if (next_line != "" && next_line !~ /^$/) {
+                print "Line " line_num ": MD022 - Heading should have blank line after"
+            }
+            line_num++
+            prev_line = next_line
+        } else {
+            prev_line = $0
+        }
+    }' "$file" 2>/dev/null || true)
+    
+    if [ -n "$heading_issues" ]; then
+        echo "  ⚠️  Heading spacing issues (MD022):"
+        echo "$heading_issues" | sed 's/^/    /'
+        issues=$((issues + $(echo "$heading_issues" | wc -l)))
     fi
     
     # Report results
