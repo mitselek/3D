@@ -14,6 +14,10 @@ A comprehensive collection of 3D printing profiles, configurations, and document
 
 ## Featured Content
 
+### Supported Printers
+- **Core One**: Complete profile structure with optimized PCTG settings
+- **Bambu Lab A1 Mini**: Full integration with G-code sequences and filament profiles
+
 ### PCTG Filament Profiles
 - **Extrudr PCTG Core One v2.0**: Optimized profile with comprehensive documentation
 - **Bambu Lab A1 Mini**: JSON profile for A1 Mini compatibility
@@ -29,7 +33,10 @@ A comprehensive collection of 3D printing profiles, configurations, and document
 2. Check `documentation/` for setup guides and optimization tips
 3. Use tools in `tools/` for advanced analysis
 
-## Related Repositories
+## Integration Complete
 
-- [A1 Mini Configurations](../a1-mini-configs/) - A1 Mini specific G-code and configs
+All printer configurations are now unified in this workspace:
+- Core One profiles and documentation
+- A1 Mini G-code sequences and configurations
+- Shared filament profiles for cross-printer compatibility
 
