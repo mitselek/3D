@@ -22,4 +22,3 @@ Optimized PCTG profiles for different printer configurations.
 2. Review temperature settings for your specific PCTG brand
 3. Run test prints to validate settings
 4. See documentation folder for detailed optimization guides
-

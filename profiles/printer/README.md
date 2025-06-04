@@ -11,4 +11,3 @@ Each printer directory contains:
 - Base printer settings
 - Hardware-specific configurations
 - Compatibility notes
-

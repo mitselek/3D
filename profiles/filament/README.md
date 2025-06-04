@@ -11,4 +11,3 @@ Each material directory contains:
 - Slicer-specific profile files
 - Material-specific documentation
 - Optimization notes and test results
-
