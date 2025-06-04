@@ -6,10 +6,9 @@ A comprehensive collection of 3D printing profiles, configurations, and document
 
 ```
 ├── profiles/           # Printer and filament profiles
-│   ├── filament/      # Material-specific settings
-│   └── printer/       # Printer-specific configurations
-├── documentation/     # Guides and optimization notes
-└── tools/            # Utilities and helper scripts
+│   ├── filament/      # PCTG profiles for both printers
+│   └── printer/       # Core One and A1 Mini configurations
+└── documentation/     # 4 PCTG optimization and testing guides
 ```
 
 ## Featured Content
@@ -23,15 +22,16 @@ A comprehensive collection of 3D printing profiles, configurations, and document
 - **Bambu Lab A1 Mini**: JSON profile for A1 Mini compatibility
 
 ### Documentation
-- Complete PCTG optimization guide
-- Testing procedures and best practices
-- PrusaSlicer compatibility notes
+- **PCTG Profile Optimizations**: Detailed technical analysis of all optimizations
+- **Testing Guide**: Step-by-step procedures for profile validation
+- **Project Summary**: Overview of all profiles and their purposes  
+- **PrusaSlicer Compatibility**: Notes on inline comment handling
 
 ## Quick Start
 
 1. Browse `profiles/` for your printer/material combination
-2. Check `documentation/` for setup guides and optimization tips
-3. Use tools in `tools/` for advanced analysis
+
+2. Check `documentation/` for PCTG setup guides and optimization tips
 
 ## Integration Complete
 
