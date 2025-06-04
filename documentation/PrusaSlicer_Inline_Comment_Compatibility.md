@@ -26,7 +26,7 @@ The vast majority of parameters support inline semicolon comments, including mul
 temperature = 268                      ; Main printing temperature
 filament_retract_length = 0.8          ; Retraction distance
 extrusion_multiplier = 0.95            ; Slight under-extrusion for cleaner prints
-```
+```ini
 
 **Multi-line inline comments (two supported formats):**
 
@@ -38,7 +38,7 @@ min_fan_speed = 30 ; Minimum fan speed: 30% provides gentle cooling without ther
 # Format 2: Separate comment lines following parameter
 max_fan_speed = 50 ; Maximum fan speed: 50% limit prevents over-cooling
 ; Higher speeds can cause layer adhesion issues with PCTG
-```
+```ini
 
 ## ❌ **Exceptions: Parameters That Require Block Comments**
 
@@ -52,7 +52,7 @@ cooling = 1
 
 # Keep fan running continuously for consistent temperature control
 fan_always_on = 1
-```
+```ini
 
 ### Material Properties
 
@@ -62,7 +62,7 @@ filament_abrasive = 0
 
 # Not water soluble
 filament_soluble = 0
-```
+```ini
 
 ## Best Practices
 
@@ -95,7 +95,7 @@ The inline comment compatibility is **evolutionary rather than systematic**. Par
 parameter = value                       ; Simple inline explanation
 parameter2 = value ; Multi-line inline explanation with proper continuation
                    ; continues on aligned lines with semicolons
-```
+```ini
 
 ## Profile Validation
 
