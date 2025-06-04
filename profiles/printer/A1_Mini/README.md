@@ -10,7 +10,7 @@ A1_Mini/
 │   ├── start/          # Start G-code files
 │   └── end/            # End G-code files
 └── README.md           # This file
-```text
+```
 
 ## G-code Files
 

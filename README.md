@@ -9,7 +9,7 @@ A comprehensive collection of 3D printing profiles, configurations, and document
 │   ├── filament/      # PCTG profiles for both printers
 │   └── printer/       # Core One and A1 Mini configurations
 └── documentation/     # 4 PCTG optimization and testing guides
-```text
+```
 
 ## Featured Content
 
