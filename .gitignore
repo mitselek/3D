@@ -1,0 +1,73 @@
+# 3D Printing Workspace .gitignore
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# PrusaSlicer temporary files
+*.3mf.bak
+*.sl1.bak
+
+# BGCode build artifacts
+build/
+build-*/
+*.o
+*.so
+*.dylib
+*.dll
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+bgcode_env/
+
+# Logs
+*.log
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+
+# Large binary files (but keep sample files)
+*.gcode
+!**/sample*.gcode
+!**/test*.gcode
+
+# BGCode files (usually large)
+*.bgcode
+!**/sample*.bgcode
+!**/test*.bgcode
+
+# Compiled profiles (keep source .ini files)
+*.compiled
+
+# Documentation build artifacts
+_build/
+.doctrees/
