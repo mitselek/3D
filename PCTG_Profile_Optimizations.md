@@ -10,19 +10,19 @@ The definitive PCTG profile with comprehensive documentation and optimizations b
 
 ### 1. Enhanced Bridge Cooling
 
-- **Changed:** `bridge_fan_speed = 70,70,70,70,70` (was 60%)
+- **Changed:** `bridge_fan_speed = 70` (was 60%)
 - **Benefit:** Better bridge quality and reduced stringing on overhangs
 - **Reason:** PCTG benefits from more aggressive cooling on bridges while maintaining good layer adhesion
 
 ### 2. Improved Wipe Before Retraction
 
-- **Changed:** `filament_retract_before_wipe = 30%,30%,30%,30%,30%` (was 20%)
+- **Changed:** `filament_retract_before_wipe = 30%` (was 20%)
 - **Benefit:** Better seam quality and reduced oozing
 - **Reason:** More thorough wiping before retraction helps with PCTG's tendency to string
 
 ### 3. Optimized Layer Time Threshold (v2.0 only)
 
-- **Changed:** `slowdown_below_layer_time = 8,8,8,8,8` (was 10s)
+- **Changed:** `slowdown_below_layer_time = 8` (was 10s)
 - **Benefit:** Better layer cooling without excessive slowdown
 - **Reason:** PCTG doesn't need as much cooling time as PLA, so 8s is more appropriate
 
