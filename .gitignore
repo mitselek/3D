@@ -55,11 +55,6 @@ bgcode_env/
 *.tar.gz
 *.rar
 
-# Large binary files (but keep sample files)
-*.gcode
-!**/sample*.gcode
-!**/test*.gcode
-
 # BGCode files (usually large)
 *.bgcode
 !**/sample*.bgcode
