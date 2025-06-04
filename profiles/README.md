@@ -13,4 +13,3 @@ This directory contains printer and filament profiles for various 3D printing se
 2. Select appropriate printer configuration from `printer/`
 3. Import profiles into your slicer software
 4. Refer to documentation for optimization tips
-

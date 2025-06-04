@@ -43,4 +43,3 @@ All printer configurations are now unified in this workspace:
 - Core One profiles and documentation
 - A1 Mini G-code sequences and configurations
 - Shared filament profiles for cross-printer compatibility
-

@@ -22,6 +22,8 @@
 # KNOWN EDGE CASES:
 # - Malformed code block: ```text closing fence instead of ``` (IMPLEMENTED ✅)
 #   Successfully detects lines like "```ini" when they should be just "```"
+# - Trailing blank lines: Files ending with extra blank lines (IMPLEMENTED ✅)
+#   Quick fix: sed -i -e :a -e '/^\s*$/N;ba' -e 's/\n*$//' filename.md
 #
 # FALSE POSITIVES ENCOUNTERED:
 # - Fixed: MD040 incorrectly flagged closing fences (```) as missing language spec
@@ -33,6 +35,10 @@
 # - MD031: Fenced code blocks should be surrounded by blank lines
 # - MD025: Multiple top-level headings
 # - MD041: First line should be a top-level heading
+#
+# USEFUL FIXES FOR DETECTED ISSUES:
+# - To remove trailing blank lines: sed -i -e :a -e '/^\s*$/N; s/\n$//; ta' filename.md
+#   (This removes all trailing blank lines in one command)
 
 WORKSPACE_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 TOTAL_FILES=0
@@ -102,14 +108,25 @@ check_file() {
         done <<< "$code_block_lines"
     fi
     
-    # Check for multiple consecutive blank lines
+    # Check for multiple consecutive blank lines and trailing blanks (improved detection)
     local blank_lines
-    blank_lines=$(grep -n '^$' "$file" 2>/dev/null | awk -F: '{
-        if (prev && $1 == prev + 1 && prev2 && prev == prev2 + 1) {
-            print "Line " $1 ": Multiple consecutive blank lines"
+    blank_lines=$(awk 'BEGIN {line_num=0; blank_count=0; total_lines=0} {
+        line_num++
+        total_lines++
+        if ($0 == "") {
+            blank_count++
+            if (blank_count >= 2) {
+                print "Line " line_num ": MD012 - Multiple consecutive blank lines (found " blank_count " consecutive)"
+            }
+        } else {
+            blank_count = 0
         }
-        prev2 = prev; prev = $1
-    }' || true)
+    } END {
+        # Check for trailing blank lines
+        if (blank_count > 0) {
+            print "Line " total_lines ": MD012 - Trailing blank line(s) at end of file"
+        }
+    }' "$file" 2>/dev/null || true)
     
     if [ -n "$blank_lines" ]; then
         echo "  ⚠️  Multiple consecutive blank lines:"
